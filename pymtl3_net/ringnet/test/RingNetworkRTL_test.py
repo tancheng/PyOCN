@@ -7,13 +7,15 @@ Test for RingNetworkRTL
 Author : Yanghui Ou, Cheng Tan
   Date : June 28, 2019
 """
+
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.SourceRTL import SourceRTL as TestSrcRTL
-from pymtl3_net.ocnlib.ifcs.packets import mk_ring_pkt
-from pymtl3_net.ocnlib.ifcs.positions import mk_ring_pos
-from pymtl3_net.ocnlib.utils import run_sim
-from pymtl3_net.ocnlib.test.stream_sinks import NetSinkRTL as TestNetSinkRTL
-from pymtl3_net.ringnet.RingNetworkRTL import RingNetworkRTL
+from ......lib.basic.val_rdy.SourceRTL import SourceRTL as TestSrcRTL
+from ...ocnlib.ifcs.packets import mk_ring_pkt
+from ...ocnlib.ifcs.positions import mk_ring_pos
+from ...ocnlib.utils import run_sim
+from ...ocnlib.test.stream_sinks import NetSinkRTL as TestNetSinkRTL
+from ...ringnet.RingNetworkRTL import RingNetworkRTL
 
 from ..RingNetworkFL import ringnet_fl
 
@@ -139,3 +141,4 @@ class RingNetwork_Tests:
 
   def test_anti_cycle_verilog( self ):
     self._test_anti_cycle('zeros')
+

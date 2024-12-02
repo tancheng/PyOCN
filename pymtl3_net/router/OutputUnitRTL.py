@@ -7,12 +7,15 @@ RTL implementation of OutputUnit with val/rdy stream interface.
 Author : Yanghui Ou, Cheng Tan
   Date : Feb 28, 2019
 """
+
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
-from pymtl3.stdlib.stream.queues import NormalQueueRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
+from .....lib.basic.val_rdy.queues import NormalQueueRTL
 
 
 class OutputUnitRTL( Component ):
+
   def construct( s, PacketType, QueueType=None ):
 
     # Local parameter

@@ -20,6 +20,7 @@ from pymtl3.stdlib.test_utils.test_srcs import TestSrcCL
 from pymtl3_net.router.OutputUnitCL import OutputUnitCL
 
 from .InputUnitCL_test import InputUnitCL_Tests as BaseTests
+from ...ocnlib.utils import run_sim
 
 #-------------------------------------------------------------------------
 # TestHarness

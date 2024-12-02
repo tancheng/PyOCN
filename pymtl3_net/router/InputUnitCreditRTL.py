@@ -7,12 +7,14 @@ An input unit with a credit based interface.
 Author : Yanghui Ou
   Date : June 22, 2019
 """
-from pymtl3_net.ocnlib.ifcs.CreditIfc import CreditRecvIfcRTL
+
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import SendIfcRTL
-from pymtl3.stdlib.basic_rtl.arbiters import RoundRobinArbiterEn
-from pymtl3.stdlib.basic_rtl import Encoder
-from pymtl3.stdlib.stream.queues import NormalQueueRTL
+from pymtl3.stdlib.primitive.arbiters import RoundRobinArbiterEn
+from pymtl3.stdlib.primitive.encoders import Encoder
+from ..ocnlib.ifcs.CreditIfc import CreditRecvIfcRTL
+from .....lib.basic.val_rdy.ifcs import SendIfcRTL
+from .....lib.basic.val_rdy.queues import NormalQueueRTL
 
 
 class InputUnitCreditRTL( Component ):

@@ -7,11 +7,13 @@ A switch unit with GetIfcRTL and SendIfcRTL.
 Author : Yanghui Ou, Cheng Tan
   Date : Feb 28, 2019
 """
+
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import SendIfcRTL, RecvIfcRTL
-from pymtl3.stdlib.basic_rtl import Mux
-from pymtl3.stdlib.basic_rtl import RoundRobinArbiterEn
-from pymtl3.stdlib.basic_rtl import Encoder
+from pymtl3.stdlib.primitive import Encoder
+from pymtl3.stdlib.primitive import Mux
+from pymtl3.stdlib.primitive import RoundRobinArbiterEn
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
 
 
 class SwitchUnitRTL( Component ):

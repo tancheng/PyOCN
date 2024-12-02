@@ -11,12 +11,12 @@ import hypothesis
 import pytest
 from hypothesis import strategies as st
 
-from pymtl3_net.ocnlib.utils import run_sim
-from pymtl3_net.router.InputUnitCL import InputUnitCL
+from ...ocnlib.utils import run_sim
+from ..InputUnitCL import InputUnitCL
 
 from pymtl3 import *
 from pymtl3.datatypes import strategies as pst
-from pymtl3.stdlib.queues import BypassQueueCL, NormalQueueCL, PipeQueueCL
+from .....lib.basic.queues import BypassQueueCL, NormalQueueCL, PipeQueueCL
 from pymtl3.stdlib.test_utils.test_sinks import TestSinkCL
 from pymtl3.stdlib.test_utils.test_srcs import TestSrcCL
 

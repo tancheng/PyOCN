@@ -7,14 +7,22 @@ Ring network-on-chip router
 Author : Yanghui Ou, Cheng Tan
   Date : June 25, 2019
 """
-from pymtl3_net.ocnlib.ifcs.CreditIfc import CreditRecvIfcRTL, CreditSendIfcRTL
-from pymtl3 import *
-from pymtl3_net.router.InputUnitCreditRTL import InputUnitCreditRTL
-from pymtl3_net.router.OutputUnitCreditRTL import OutputUnitCreditRTL
-from pymtl3_net.router.Router import Router
-from pymtl3_net.router.SwitchUnitRTL import SwitchUnitRTL
 
+
+# from pymtl3_net.ocnlib.ifcs.CreditIfc import CreditRecvIfcRTL, CreditSendIfcRTL
+# from pymtl3 import *
+# from pymtl3_net.router.InputUnitCreditRTL import InputUnitCreditRTL
+# from pymtl3_net.router.OutputUnitCreditRTL import OutputUnitCreditRTL
+# from pymtl3_net.router.Router import Router
+# from pymtl3_net.router.SwitchUnitRTL import SwitchUnitRTL
+
+from pymtl3 import *
 from .RingRouteUnitRTL import RingRouteUnitRTL
+from ..ocnlib.ifcs.CreditIfc import CreditRecvIfcRTL, CreditSendIfcRTL
+from ..router.InputUnitCreditRTL import InputUnitCreditRTL
+from ..router.OutputUnitCreditRTL import OutputUnitCreditRTL
+from ..router.Router import Router
+from ..router.SwitchUnitRTL import SwitchUnitRTL
 
 
 class RingRouterRTL( Component ):

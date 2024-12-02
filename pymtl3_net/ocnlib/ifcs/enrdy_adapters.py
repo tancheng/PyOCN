@@ -1,14 +1,18 @@
-#=========================================================================
-# enrdy_adapters
-#=========================================================================
-# Adapters for EnRdy interface
-#
-# Author : Yanghui Ou
-#   Date : Feb 20, 2019
+'''
+=========================================================================
+enrdy_adapters
+=========================================================================
+Adapters for EnRdy interface
+
+Author : Yanghui Ou
+  Date : Feb 20, 2019
+'''
+
 
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL as InValRdyIfc, SendIfcRTL as OutValRdyIfc
-from pymtl3.stdlib.ifcs   import SendIfcRTL, RecvIfcRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL as InValRdyIfc, SendIfcRTL as OutValRdyIfc
+from .....lib.basic.en_rdy.ifcs import SendIfcRTL, RecvIfcRTL
+
 
 #-------------------------------------------------------------------------
 # InValRdy2Send

@@ -7,10 +7,12 @@ A Generic deserializer.
 Author : Yanghui Ou
   Date : Feb 26, 2020
 '''
-from pymtl3 import *
-from pymtl3.stdlib.ifcs import RecvIfcRTL, SendIfcRTL
 
+
+from pymtl3 import *
+from ......lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
 from .Counter import Counter
+
 
 class DeserializerRTL( Component ):
 

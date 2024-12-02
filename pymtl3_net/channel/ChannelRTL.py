@@ -1,19 +1,23 @@
-#=========================================================================
-# ChannelRTL.py
-#=========================================================================
-# CL channel module for connecting routers to form network. This simple
-# channel has latency insensitive send/recv interfaces.
-#
-# Author : Cheng Tan, Yanghui Ou
-#   Date : Mar 16, 2019
+'''
+=========================================================================
+ChannelRTL.py
+=========================================================================
+CL channel module for connecting routers to form network. This simple
+channel has latency insensitive send/recv interfaces.
 
-from pymtl3_net.ocnlib.ifcs.PhysicalDimension import PhysicalDimension
+Author : Cheng Tan, Yanghui Ou
+  Date : Mar 16, 2019
+'''
+
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
-from pymtl3.stdlib.stream.queues import NormalQueueRTL
+from ..ocnlib.ifcs.PhysicalDimension import PhysicalDimension
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
+from .....lib.basic.val_rdy.queues import NormalQueueRTL
 
 
 class ChannelRTL( Component ):
+
   def construct(s, PacketType, QueueType=NormalQueueRTL, latency=0 ):
 
     # Constant
@@ -64,3 +68,4 @@ class ChannelRTL( Component ):
 
   def elaborate_physical( s ):
     s.dim.w = 250
+

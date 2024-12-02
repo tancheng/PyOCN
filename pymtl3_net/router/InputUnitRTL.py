@@ -7,9 +7,11 @@ An input unit with val/rdy stream interfaces.
 Author : Yanghui Ou, Cheng Tan
   Date : Mar 23, 2019
 """
+
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import SendIfcRTL, RecvIfcRTL
-from pymtl3.stdlib.stream.queues import NormalQueueRTL
+from .....lib.basic.val_rdy.ifcs import SendIfcRTL, RecvIfcRTL
+from .....lib.basic.val_rdy.queues import NormalQueueRTL
 
 
 class InputUnitRTL( Component ):

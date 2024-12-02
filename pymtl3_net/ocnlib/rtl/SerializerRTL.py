@@ -8,10 +8,10 @@ Author : Yanghui Ou
   Date : Feb 25, 2020
 '''
 from pymtl3 import *
-from pymtl3.stdlib.ifcs import SendIfcRTL, RecvIfcRTL
-from pymtl3.stdlib.basic_rtl import Mux
-
+from pymtl3.stdlib.primitive import Mux
 from .Counter import Counter
+from ......lib.basic.val_rdy.ifcs import SendIfcRTL, RecvIfcRTL
+
 
 class SerializerRTL( Component ):
 

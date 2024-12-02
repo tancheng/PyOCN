@@ -1,14 +1,17 @@
-#=========================================================================
-# Router.py
-#=========================================================================
-# A generic router model.
-#
-# Author : Yanghui Ou, Cheng Tan
-#   Date : Mar 26, 2019
+'''
+=========================================================================
+Router.py
+=========================================================================
+A generic router model.
 
-from pymtl3_net.ocnlib.ifcs.PhysicalDimension import PhysicalDimension
+Author : Yanghui Ou, Cheng Tan
+  Date : Mar 26, 2019
+'''
+
+
+from ..ocnlib.ifcs.PhysicalDimension import PhysicalDimension
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
 
 
 class Router( Component ):

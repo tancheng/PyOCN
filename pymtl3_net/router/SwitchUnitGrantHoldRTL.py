@@ -9,11 +9,13 @@ R.I.P. Kobe.
 Author : Yanghui Ou
   Date : Jan 26, 2020
 '''
+
+
 from pymtl3 import *
-from pymtl3.stdlib.basic_rtl import Mux, Encoder
-# from pymtl3.stdlib.ifcs import GetIfcRTL, GiveIfcRTL, SendIfcRTL
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
-from pymtl3_net.ocnlib.rtl import Counter, GrantHoldArbiter
+from pymtl3.stdlib.primitive import Mux, Encoder
+from ..ocnlib.rtl import Counter, GrantHoldArbiter
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
+
 
 class SwitchUnitGrantHoldRTL( Component ):
 

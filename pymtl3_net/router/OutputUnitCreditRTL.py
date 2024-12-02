@@ -7,10 +7,10 @@ An output unit with a credit based interface.
 Author : Yanghui Ou
   Date : June 22, 2019
 """
-from pymtl3_net.ocnlib.ifcs.CreditIfc import CreditSendIfcRTL, enrdy_to_str
-from pymtl3_net.ocnlib.rtl import Counter
+from ..ocnlib.ifcs.CreditIfc import CreditSendIfcRTL, enrdy_to_str
+from ..ocnlib.rtl import Counter
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL
 
 
 class OutputUnitCreditRTL( Component ):

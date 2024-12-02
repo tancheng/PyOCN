@@ -7,8 +7,9 @@ Author : Yanghui Ou
   Date : Jan 13, 2022
 """
 
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL
+from ......lib.basic.val_rdy.ifcs import RecvIfcRTL
 
 
 class PyMTLTestSinkError( Exception ): pass

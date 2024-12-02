@@ -7,19 +7,19 @@ Test cases for InputUnitRTL.
 Author: Yanghui Ou
   Date: Mar 24, 2019
 """
-import pytest
+
 
 from pymtl3 import *
-from pymtl3.stdlib.stream.queues import (BypassQueueRTL, NormalQueueRTL,
-                                      PipeQueueRTL)
+from ......lib.basic.val_rdy.queues import (BypassQueueRTL,
+                                            NormalQueueRTL,
+                                            PipeQueueRTL)
 from pymtl3.stdlib.test_utils import TestVectorSimulator
+from .OutputUnitRTL_test import OutputUnitRTL_Tests as BaseTests
+from ...router.InputUnitRTL import InputUnitRTL
+from ......lib.basic.val_rdy.SinkRTL import SinkRTL as TestSinkRTL
+from ......lib.basic.val_rdy.SourceRTL import SourceRTL as TestSrcRTL
+import pytest
 
-from pymtl3.stdlib.stream.SinkRTL import SinkRTL as TestSinkRTL
-from pymtl3.stdlib.stream.SourceRTL import SourceRTL as TestSrcRTL
-
-from pymtl3_net.router.InputUnitRTL import InputUnitRTL
-
-from .InputUnitCL_test import InputUnitCL_Tests as BaseTests
 
 #-------------------------------------------------------------------------
 # TestVectorSimulator test
