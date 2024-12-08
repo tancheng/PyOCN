@@ -10,10 +10,10 @@ Author : Yanghui Ou
 import pytest
 from pymtl3 import *
 from pymtl3.stdlib.test_utils import mk_test_case_table
-from pymtl3.stdlib.stream.SourceRTL import SourceRTL as TestSource
-from pymtl3_net.ocnlib.ifcs.packets import mk_generic_pkt, mk_xbar_pkt
-from pymtl3_net.ocnlib.utils import run_sim
-from pymtl3_net.ocnlib.test.stream_sinks import NetSinkRTL as TestSink
+from ......lib.basic.val_rdy.SourceRTL import SourceRTL as TestSource
+from ...ocnlib.ifcs.packets import mk_generic_pkt, mk_xbar_pkt
+from ...ocnlib.utils import run_sim
+from ...ocnlib.test.stream_sinks import NetSinkRTL as TestSink
 
 from ..XbarRTL import XbarRTL
 

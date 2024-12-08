@@ -11,7 +11,7 @@ Author : Yanghui Ou, Cheng Tan
 
 from pymtl3 import *
 from .....lib.basic.val_rdy.ifcs import SendIfcRTL, RecvIfcRTL
-from .....lib.basic.val_rdy.queues import NormalQueueRTL
+from .....lib.basic.val_rdy.queues import *
 
 
 class InputUnitRTL( Component ):

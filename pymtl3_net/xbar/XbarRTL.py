@@ -8,11 +8,11 @@ Author : Yanghui Ou
   Date : Apr 16, 2020
 '''
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
-from pymtl3_net.router.InputUnitRTL import InputUnitRTL
-from pymtl3_net.router.OutputUnitRTL import OutputUnitRTL
-from pymtl3_net.router.SwitchUnitRTL import SwitchUnitRTL
-from pymtl3_net.router.SwitchUnitNullRTL import SwitchUnitNullRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
+from ..router.InputUnitRTL import InputUnitRTL
+from ..router.OutputUnitRTL import OutputUnitRTL
+from ..router.SwitchUnitRTL import SwitchUnitRTL
+from ..router.SwitchUnitNullRTL import SwitchUnitNullRTL
 
 from .XbarRouteUnitRTL import XbarRouteUnitRTL
 

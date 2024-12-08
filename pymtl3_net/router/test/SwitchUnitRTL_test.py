@@ -27,20 +27,22 @@ def test_switch_unit_simple():
   dut.sim_reset()
 
   dut.recv[0].val @= 1
-  dut.recv[0].msg @= 0xfaceb00c
+  dut.recv[0].msg @= 0xfaceb000
   dut.recv[1].val @= 1
-  dut.recv[1].msg @= 0xdeadface
+  dut.recv[1].msg @= 0xdeadfac1
   dut.recv[4].val @= 1
-  dut.recv[4].msg @= 0xbaadbeef
+  dut.recv[4].msg @= 0xbaadbee4
+  dut.recv[2].val @= 1
+  dut.recv[2].msg @= 0xbaadbee2
   dut.send.rdy@= 0
   dut.sim_eval_combinational()
   dut.sim_tick()
 
-  for i in range( 3 ):
+  for i in range( 4 ):
     dut.send.rdy @= 1
     dut.sim_eval_combinational()
 
     assert dut.send.rdy
-    assert dut.send.msg in { b32(0xfaceb00c), b32(0xdeadface), b32(0xbaadbeef)  }
+    assert dut.send.msg in { b32(0xfaceb000), b32(0xdeadfac1), b32(0xbaadbee4), b32(0xbaadbee2) }
     dut.sim_tick()
 

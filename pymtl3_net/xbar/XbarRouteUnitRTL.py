@@ -8,7 +8,7 @@ Author : Yanghui Ou
   Date : Apr 16, 2020
 '''
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
 
 class XbarRouteUnitRTL( Component ):
 
