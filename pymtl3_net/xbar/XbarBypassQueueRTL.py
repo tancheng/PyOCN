@@ -45,6 +45,8 @@ class XbarBypassQueueRTL(Component):
     s.input_units = [InputUnitType(PacketType, BypassQueueRTL)
                      for _ in range(s.num_inports)]
 
+    s.packet_on_input_units = [OutPort(PacketType) for _ in range(s.num_inports)]
+
     s.route_units = [RouteUnitType(PacketType, s.num_outports)
                      for i in range(s.num_inports)]
 
@@ -55,6 +57,9 @@ class XbarBypassQueueRTL(Component):
                       for _ in range(s.num_outports)]
 
     # Connections
+
+    for i in range(s.num_inports):
+      s.packet_on_input_units[i] //= s.input_units[i].send.msg
 
     for i in range(s.num_inports):
       s.recv[i] //= s.input_units[i].recv
