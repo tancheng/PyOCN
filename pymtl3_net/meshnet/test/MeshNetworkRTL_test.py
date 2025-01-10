@@ -7,17 +7,17 @@ Test for NetworkRTL
 Author : Yanghui Ou, Cheng Tan
   Date : Mar 20, 2019
 """
-from pymtl3_net.meshnet.DORXMeshRouteUnitRTL import DORXMeshRouteUnitRTL
-from pymtl3_net.meshnet.DORYMeshRouteUnitRTL import DORYMeshRouteUnitRTL
-from pymtl3_net.meshnet.MeshNetworkRTL import MeshNetworkRTL
-from pymtl3_net.ocnlib.ifcs.packets import mk_mesh_pkt
-from pymtl3_net.ocnlib.ifcs.positions import mk_mesh_pos
-from pymtl3_net.ocnlib.utils import run_sim
-from pymtl3_net.ocnlib.test.stream_sinks import NetSinkRTL as TestNetSinkRTL
+from ...meshnet.DORXMeshRouteUnitRTL import DORXMeshRouteUnitRTL
+from ...meshnet.DORYMeshRouteUnitRTL import DORYMeshRouteUnitRTL
+from ...meshnet.MeshNetworkRTL import MeshNetworkRTL
+from ...router.InputUnitRTL import InputUnitRTL
+from ...ocnlib.ifcs.packets import mk_mesh_pkt
+from ...ocnlib.ifcs.positions import mk_mesh_pos
+from ...ocnlib.utils import run_sim
+from ...ocnlib.test.stream_sinks import NetSinkRTL as TestNetSinkRTL
 from pymtl3 import *
-from pymtl3.stdlib.stream.queues import NormalQueueRTL
-from pymtl3.stdlib.stream.SourceRTL import SourceRTL as TestSrcRTL
-from pymtl3_net.router.InputUnitRTL import InputUnitRTL
+# from pymtl3.stdlib.stream.SourceRTL import SourceRTL as TestSrcRTL
+from ......lib.basic.val_rdy.SourceRTL import SourceRTL as TestSrcRTL
 
 #-------------------------------------------------------------------------
 # TestHarness

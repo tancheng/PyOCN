@@ -8,14 +8,12 @@ Author : Yanghui Ou, Cheng Tan
   Date : June 22, 2019
 """
 
-
 from ..ocnlib.ifcs.CreditIfc import (CreditRecvRTL2SendRTL,
                                      RecvRTL2CreditSendRTL)
 from pymtl3 import *
 from .RingRouterRTL import RingRouterRTL
 from .directions import *
 from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
-
 
 class RingNetworkRTL( Component ):
 

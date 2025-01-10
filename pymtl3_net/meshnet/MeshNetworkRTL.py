@@ -7,14 +7,14 @@ Mesh network implementation.
 Author : Yanghui Ou, Cheng Tan
   Date : Mar 10, 2019
 """
+
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
-
-from pymtl3_net.channel.ChannelRTL import ChannelRTL
-
+# from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
+# from pymtl3_net.channel.ChannelRTL import ChannelRTL
+from ..channel.ChannelRTL import ChannelRTL
 from .directions import *
 from .MeshRouterRTL import MeshRouterRTL
-
 
 class MeshNetworkRTL( Component ):
   def construct( s, PacketType, PositionType,
