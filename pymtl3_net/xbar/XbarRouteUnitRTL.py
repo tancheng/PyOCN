@@ -8,7 +8,7 @@ Author : Yanghui Ou
   Date : Apr 16, 2020
 '''
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
 
 class XbarRouteUnitRTL( Component ):
 
@@ -40,12 +40,13 @@ class XbarRouteUnitRTL( Component ):
 
     @update
     def up_ru_routing():
-      s.out_dir @= trunc( s.recv.msg.dst, dir_nbits )
+      s.out_dir @= zext(b1(0), dir_nbits)
 
       for i in range( num_outports ):
         s.send[i].val @= b1(0)
 
       if s.recv.val:
+        s.out_dir @= trunc( s.recv.msg.dst, dir_nbits )
         s.send[ s.out_dir ].val @= b1(1)
 
     @update

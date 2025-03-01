@@ -7,12 +7,13 @@ A ring route unit with val/rdy interface.
 Author : Yanghui Ou, Cheng Tan
   Date : April 6, 2019
 """
+
+
 from copy import deepcopy
 
 from pymtl3 import *
-from pymtl3.stdlib.stream.ifcs import RecvIfcRTL, SendIfcRTL
-
 from .directions import *
+from .....lib.basic.val_rdy.ifcs import RecvIfcRTL, SendIfcRTL
 
 
 class RingRouteUnitRTL( Component ):
@@ -63,6 +64,7 @@ class RingRouteUnitRTL( Component ):
       s.send_msg_wire @= s.recv.msg
       for i in range( s.num_outports ):
         s.send[i].val @= 0
+        s.send[i].msg @= 0
 
       if s.recv.val:
         if s.pos == s.recv.msg.dst:
