@@ -50,7 +50,7 @@ class RingRouteUnitRTL( Component ):
     # Routing logic
     @update
     def up_left_right_dist():
-      if s.recv.msg.dst < s.pos:
+      if zext(s.recv.msg.dst, PositionType) < s.pos:
         s.left_dist  @= zext(s.pos, DistType) - zext(s.recv.msg.dst, DistType)
         s.right_dist @= zext(s.last_idx, DistType) - zext(s.pos, DistType) + zext(s.recv.msg.dst, DistType) + 1
       else:
@@ -66,7 +66,7 @@ class RingRouteUnitRTL( Component ):
         s.send[i].val @= 0
 
       if s.recv.val:
-        if s.pos == s.recv.msg.dst:
+        if s.pos == zext(s.recv.msg.dst, PositionType):
           s.out_dir @= SELF
         elif s.left_dist < s.right_dist:
           s.out_dir @= LEFT
