@@ -64,6 +64,7 @@ class RingRouteUnitRTL( Component ):
       s.send_msg_wire @= s.recv.msg
       for i in range( s.num_outports ):
         s.send[i].val @= 0
+        s.send[i].msg @= PacketType()
 
       if s.recv.val:
         if s.pos == s.recv.msg.dst:

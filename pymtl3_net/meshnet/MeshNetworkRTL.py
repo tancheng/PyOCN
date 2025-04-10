@@ -85,24 +85,24 @@ class MeshNetworkRTL( Component ):
       # won't complain about net need driver.
 
       if i // ncols == 0:
-        s.routers[i].send[SOUTH].rdy         //= 0
-        s.routers[i].recv[SOUTH].val         //= 0
-        s.routers[i].recv[SOUTH].msg.payload //= 0
+        s.routers[i].send[SOUTH].rdy //= 0
+        s.routers[i].recv[SOUTH].val //= 0
+        s.routers[i].recv[SOUTH].msg //= PacketType()
 
       if i // ncols == nrows - 1:
-        s.routers[i].send[NORTH].rdy         //= 0
-        s.routers[i].recv[NORTH].val         //= 0
-        s.routers[i].recv[NORTH].msg.payload //= 0
+        s.routers[i].send[NORTH].rdy //= 0
+        s.routers[i].recv[NORTH].val //= 0
+        s.routers[i].recv[NORTH].msg //= PacketType()
 
       if i % ncols == 0:
-        s.routers[i].send[WEST].rdy          //= 0
-        s.routers[i].recv[WEST].val          //= 0
-        s.routers[i].recv[WEST].msg.payload  //= 0
+        s.routers[i].send[WEST].rdy //= 0
+        s.routers[i].recv[WEST].val //= 0
+        s.routers[i].recv[WEST].msg //= PacketType()
 
       if i % ncols == ncols - 1:
-        s.routers[i].send[EAST].rdy          //= 0
-        s.routers[i].recv[EAST].val          //= 0
-        s.routers[i].recv[EAST].msg.payload  //= 0
+        s.routers[i].send[EAST].rdy //= 0
+        s.routers[i].recv[EAST].val //= 0
+        s.routers[i].recv[EAST].msg //= PacketType()
 
   def line_trace( s ):
     trace    = []
